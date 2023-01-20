@@ -1,0 +1,296 @@
+/*
+Title: Aux Portes de l'Au-Delà
+Version: 1.0
+Author: Marine-Lou
+Design: Marine-Lou
+Last Update: 28-11-2022
+
+/ STRUCTURE /
+body
+    header
+        img
+    main
+        section enter
+        section intro
+        section quizz
+            article question
+            article answers
+            article score
+            aside next
+        section ending
+
+[-> Sorted by Order
+
+/ TYPE /
+Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900
+
+/ COLORS /
+Black #000000 rgba(0, 0, 0, 1)
+White #ffffff rgba(255, 255, 255, 1)
+Light Blue #60929b rgba(96, 146, 155, 1)
+Medium Blue #1e4c58 rgba(30, 76, 88, 0.6)
+Dark Blue #082b38  rgba(8, 43, 56, 1)
+Darkest Blue #041216 rgba(4, 18, 22, 1)
+Dark red #a31c1c rgba(163, 28, 28, 1)
+
+*/
+
+/* GENERAL */
+html {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url("../img/Aux-Portes-De-l-Au-Dela_bg.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: countain;
+    font-family: 'Bodoni Moda', serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: #082b38;
+}
+.d-none {
+    display: none!important;
+}
+
+/* TEXT STYLE */
+h1 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+h2 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 10px;
+    overflow-wrap: normal;
+}
+h3 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 10px 0px 0px 0px;
+    overflow-wrap: normal;
+}
+h4 {
+    margin: 0px 0px 5px 0px;
+}
+p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    font-style: italic;
+    overflow-wrap: normal;
+}
+a {
+    text-decoration: none;
+    color: #082b38;
+}
+.redHell {
+    color: #a31c1c;
+}
+
+/* ANIMATIONS */
+@keyframes glowing {
+    0% {
+        background-color: #082b38;
+        box-shadow: 0 0 3px #082b38;
+    }
+    50% {
+        background-color: #60929b;
+        box-shadow: 2 2 10px #60929b;
+    }
+    100% {
+        background-color: #082b38;
+        box-shadow: 0 0 3px #082b38;
+    }
+}
+#enterBtn {
+    animation: glowing 2600ms infinite;
+}
+
+/* HEADER logo */
+header {
+    display: flex;
+    justify-content: center;
+}
+#logo-block {
+    height: 200px;
+    margin: 30px 0px 30px 0px;
+}
+.logoHeightReduced {
+    height: 150px!important;
+}
+
+/* MAIN */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 7% 0px 7%;
+    padding: 20px 20px 20px 20px;
+    min-width: 390px;
+    max-width: 600px;
+}
+article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    font-family: 'Bodoni Moda', serif;
+    background-color: rgba(8, 43, 56, 1);
+    border: none;
+    color: white!important;
+    box-shadow: -2px 2px 10px #60929b;
+}
+button:hover {
+    color: white!important;
+    background-color: rgba(96, 146, 155, 1);
+    box-shadow: -2px 2px 10px #fff;
+    box-shadow: -2px 2px 10px #082b38;
+}
+
+/* SECTION enter */
+#enterBtn {
+    width: 140px;
+    height: 140px;
+    border-radius: 70px;
+    margin-top: 160px;
+}
+
+/* SECTION intro */
+#introSection h1 {
+    margin: 0px 0px 20px 0px;
+}
+#introSection h2 {
+    font-style: italic;
+    margin: 20px 0px 20px 0px;
+}
+#introBtn {
+    margin-top: 20px;
+}
+#introBtn img {
+    width: 50px;
+}
+
+/* SECTION quizz */
+#questionArticle h2 {
+    border-radius: 30px;
+    background-color: rgba(114,177,178, 0.3);
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 0;
+    width: 100%;
+}
+#questionArticle p {
+    padding: 5px 0px 0px 15px;
+    text-align: left;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    min-height: 140px;
+    max-height: 180px;
+}
+.answerDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    padding: 20px 10px 10px 10px;
+}
+.answerBtn{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    margin: 0;
+}
+.answerBtn img {
+    width: 20px;
+}
+#scoreArticle {
+    border-radius: 30px;
+    background-color: rgba(114,177,178, 0.3);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px 10px 20px 10px;
+}
+.scoreDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #082b38;
+    color: white;
+    margin: 10px 0px 10px 0px;
+}
+.scoreDiv h3{
+    margin: 0;
+}
+#scoreArticle p{
+    text-align: center;
+}
+
+/* NEXT - END BTN */
+.nextEndArticles {
+    margin-bottom: 20px;
+}
+.nextEndArticles img {
+    width: 30px;
+    margin: 0;
+}
+
+/*SECTION ending*/
+#endingImg {
+    width: 600px;
+}
+#endingArticle h2 {
+    margin-bottom: 0px;
+}
+#endingArticle p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 30px 0px 30px 0px;
+}
+#replayArticle {
+    border-radius: 30px;
+    background-color: rgba(114,177,178, 0.3);
+    padding: 20px 10px 20px 10px;
+    margin-top: 50px;
+}
+#replayArticle h3{
+    margin: 0;
+}
+#replayArticle button {
+    margin-top: 20px;
+}
+#nextBtn img {
+    width: 30px;
+    margin: 0;
+}

@@ -1,0 +1,58 @@
+<!--Quizz-->
+<section id="quizzSection">
+    <p>Question :</p>
+    <article id="questionArticle">
+        <h2 id="question"></h2>
+    </article>
+    <!--Answers-->
+    <article id="answersArticle">
+        <div class="row">
+            <div class="answerDiv">
+                <button class="answerBtn" id="answerBtnOne" onclick="questionAnswered(1)" type="button">
+                    <img alt="réponse 1" src="assets/img/Aux-Portes-De-l-Au-Dela_1.png" title="réponse 1">
+                </button>
+                <h3 id="answerOne"></h3>
+            </div>
+            <div class="answerDiv">
+                <button class="answerBtn" id="answerBtnTwo" onclick="questionAnswered(2)" type="button">
+                    <img alt="réponse 2" src="assets/img/Aux-Portes-De-l-Au-Dela_2.png" title="réponse 2">
+                </button>
+                <h3 id="answerTwo"></h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="answerDiv">
+                <button class="answerBtn" id="answerBtnThree" onclick="questionAnswered(3)" type="button">
+                    <img alt="réponse 3" src="assets/img/Aux-Portes-De-l-Au-Dela_3.png" title="réponse 3">
+                </button>
+                <h3 id="answerThree"></h3>
+            </div>
+            <div class="answerDiv">
+                <button class="answerBtn" id="answerBtnFour" onclick="questionAnswered(4)" type="button">
+                    <img alt="réponse 4" src="assets/img/Aux-Portes-De-l-Au-Dela_4.png" title="réponse 4">
+                </button>
+                <h3 id="answerFour"></h3>
+            </div>
+        </div>
+    </article>
+    <!--Score-->
+    <article class="d-none" id="scoreArticle">
+        <h3 id="yourAnswer"></h3>
+        <div class="scoreDiv"><h3 id="yourScore"></h3>
+            <p>pts</p></div>
+        <p id="embold"></p>
+    </article>
+    <!--Next - The end-->
+    <article id="nextAside" class="nextEndArticles">
+        <button id="next" onclick="newQuestion()" type="button">
+            <h4>Suivant</h4>
+            <img alt="suivant" src="assets/img/Aux-Portes-De-l-Au-Dela_arrow-right-w.png" title="suivant">
+        </button>
+    </article>
+    <article id="endAside" class="nextEndArticles d-none">
+        <button id="endingBtn" onclick="loadEndingHTML()" type="button">
+            <h4>Mon Sort...</h4>
+            <img alt="The End" src="assets/img/Aux-Portes-De-l-Au-Dela_arrow-right-w.png" title="mon sort">
+        </button>
+    </article>
+</section>
