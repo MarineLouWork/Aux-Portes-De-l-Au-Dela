@@ -5,6 +5,13 @@ LABELS : #DONTWORK / #UNDONE
 
  */
 
+// Replay
+function replay() {
+    score = 0;
+    alreadyAsked = [];
+    loadIntroHTML()
+}
+
 // Enter to Intro
 function loadIntroHTML() {
     fetch('intro.html')
@@ -29,13 +36,13 @@ function randomNumber(min, max) {
 }
 const askOne = 'To be or not to be ?';
 const askTwo = 'As tu déjà mangé une pizza à l\'ananas ?';
-const askThree = 'Question C';
+const askThree = 'Si tu avais une baguette magique, tu aurais fait quoi pour changer le monde ?';
 const askFour = 'Pour toi, la série Game of Thrones c\'est...';
 const askFive = 'Allez... rattrape toi, pain au chocolat ou chocolatine ?';
 const askS = [askOne, askTwo, askThree, askFour, askFive];
 const answersOne = ['That is the question. D\'ailleurs, tant qu\'on est là, t\'aurais, pas la réponse ?', 'Quoi ? J\'parle pas anglais moi en fait...', 'Vis ! Rêve ! Envole-toi !', 'L\'autre réponse'];
 const answersTwo = ['Oui, mais juste une fois c\'était dégueulasse', 'Jamais au grand Jamais', 'Toutes les semaines, le gros gros kif', 'J\'étais carpophobe'];
-const answersThree = ['Réponse C0', 'Réponse C1', 'Réponse C2', 'Réponse C3'];
+const answersThree = ['Je remplirai ma maison de billets et serai riche pour toujours', 'Je donnerai un toît et de quoi boire et manger à tous', 'Je la donnerai à quelqu\'un d\'autre, trop de responsabilités !', 'Je créerai une équipe de super héros pour anéantir le mal, et resterai dans mon canapé à manger des chips devant le SuperBowl'];
 const answersFour = ['Un chef d\'oeuvre, tout simplement', 'C\'est lent on attend 10 ans de voir les dragons grandir', 'C\'était diffusé sur quelle antenne ? Antenne 2 ?', 'LA meilleure série de tous les temps.'];
 const answersFive = ['Sérieusement ? encore ce débat inutile ?', 'Pain au chocolat', 'Chocolatine', 'Pain à la chocolatine, pour la paix dans le monde !'];
 const answers = [answersOne, answersTwo, answersThree, answersFour, answersFive];
@@ -109,7 +116,6 @@ function loadEndingHTML() {
         .then(text =>  {
             document.getElementById('logo-block').classList.remove('logoHeightReduced');
             document.getElementsByTagName('main')[0].innerHTML = text
-            console.log(score)
             if ( score >= -3) {
                 document.getElementById('endingImg')
                 endingParadise()
