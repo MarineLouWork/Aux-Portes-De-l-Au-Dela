@@ -39,8 +39,8 @@ Dark red #a31c1c rgba(163, 28, 28, 1)
 /* GENERAL */
 html {
     height: 100vh;
+    width: 100%;
     margin: 0;
-    padding: 0;
 }
 
 body {
@@ -50,9 +50,11 @@ body {
     background-size: auto;
     font-family: 'Libre Bodoni', serif;
     min-height: 100vh;
+    width: 100%;
     margin: 0;
     padding: 0;
     color: #082b38;
+    overflow-x: hidden;
 }
 
 .d-none {
@@ -131,6 +133,8 @@ a {
 header {
     display: flex;
     justify-content: center;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 #logo-block {
@@ -148,14 +152,16 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
 }
 section {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 7% 0 7%;
+    box-sizing: border-box;
     padding: 20px 20px 20px 20px;
-    min-width: 390px;
+    width: 100%;
     max-width: 600px;
 }
 
@@ -213,11 +219,11 @@ button:hover {
 #introSection p {
     font-family: 'Montserrat', sans-serif;
     text-align: justify;
-    font-weight: 400;
     font-style: italic;
     line-height: 28px;
     text-indent: 50px;
     margin-bottom: 10px;
+    width: 100%;
 }
 
 #introBtn {
@@ -251,7 +257,6 @@ button:hover {
     flex-direction: row;
     justify-content: center;
     min-height: 140px;
-    max-height: 180px;
 }
 
 .answerDiv {
@@ -260,6 +265,7 @@ button:hover {
     align-items: center;
     width: 300px;
     padding: 20px 10px 10px 10px;
+    box-sizing: border-box;
 }
 
 .answerBtn{
